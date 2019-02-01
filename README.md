@@ -1,7 +1,7 @@
 # Teller-App
 Desktop application to be used by the teller employees on a physical bank.
 
-It was created using Windows Form/C#.
+It was created using Windows Form/C#, as the project for the programming course at the Instituto Tecnológico de Santo Domingo.
 
 #Description
 
