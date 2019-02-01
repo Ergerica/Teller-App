@@ -3,7 +3,7 @@ Desktop application to be used by the teller employees on a physical bank.
 
 It was created using Windows Form/C#, as the project for the programming course at the Instituto Tecnológico de Santo Domingo.
 
-#Description
+<b>Description</b>
 
 The user can perform transactions such as withdrawal and deposit. Each transaction will be stored on a local database, and there will also 
 be a tracking of how many bills of each quantity has the actual cash register.
