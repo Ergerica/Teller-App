@@ -13,7 +13,9 @@ bank's core system. The local app will request several objects such as Clients a
 amount of the desired withdrawal is less than the Account's balance. After doing all verifications the App will tell the 'unifier'(Sending a
 transaction object), the information of the transaction so that it can be stored on the core system.
 
-#Connections and databases
+During each withdrawal, the app recommends though a greedy algorithm the employee how many bills of each quantity he/she should give to the client.
+
+<b>Connections and databases</b>
 
 The local database for the cash tracking, transaction storage and local employees were managed using SQL server through Sqlconnection and 
 Sqlcommand classes.
