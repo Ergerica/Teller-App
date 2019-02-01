@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCliente">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cedula" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getClienteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getClienteResult" type="tns:Cliente" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Cliente">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="apellido" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="cedula" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="foto" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="fechaNacimiento" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="nacionalidad" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="getCuenta">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCuentaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getCuentaResult" type="tns:Cuenta" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Cuenta">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="tipo" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="idCliente" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="cedulaCliente" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="balance" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="TipoMoneda" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="hacerRetiro">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idCuenta" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="monto" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="hacerRetiroResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="hacerRetiroResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="hacerDeposito">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="monto" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="cuenta" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="cedula" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="concepto" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="hacerDepositoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="hacerDepositoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="getClienteSoapIn">
+    <wsdl:part name="parameters" element="tns:getCliente" />
+  </wsdl:message>
+  <wsdl:message name="getClienteSoapOut">
+    <wsdl:part name="parameters" element="tns:getClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCuentaSoapIn">
+    <wsdl:part name="parameters" element="tns:getCuenta" />
+  </wsdl:message>
+  <wsdl:message name="getCuentaSoapOut">
+    <wsdl:part name="parameters" element="tns:getCuentaResponse" />
+  </wsdl:message>
+  <wsdl:message name="hacerRetiroSoapIn">
+    <wsdl:part name="parameters" element="tns:hacerRetiro" />
+  </wsdl:message>
+  <wsdl:message name="hacerRetiroSoapOut">
+    <wsdl:part name="parameters" element="tns:hacerRetiroResponse" />
+  </wsdl:message>
+  <wsdl:message name="hacerDepositoSoapIn">
+    <wsdl:part name="parameters" element="tns:hacerDeposito" />
+  </wsdl:message>
+  <wsdl:message name="hacerDepositoSoapOut">
+    <wsdl:part name="parameters" element="tns:hacerDepositoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="TellerServicesSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCliente">
+      <wsdl:input message="tns:getClienteSoapIn" />
+      <wsdl:output message="tns:getClienteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCuenta">
+      <wsdl:input message="tns:getCuentaSoapIn" />
+      <wsdl:output message="tns:getCuentaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="hacerRetiro">
+      <wsdl:input message="tns:hacerRetiroSoapIn" />
+      <wsdl:output message="tns:hacerRetiroSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="hacerDeposito">
+      <wsdl:input message="tns:hacerDepositoSoapIn" />
+      <wsdl:output message="tns:hacerDepositoSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TellerServicesSoap" type="tns:TellerServicesSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCliente">
+      <soap:operation soapAction="http://tempuri.org/getCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCuenta">
+      <soap:operation soapAction="http://tempuri.org/getCuenta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="hacerRetiro">
+      <soap:operation soapAction="http://tempuri.org/hacerRetiro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="hacerDeposito">
+      <soap:operation soapAction="http://tempuri.org/hacerDeposito" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="TellerServicesSoap12" type="tns:TellerServicesSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCliente">
+      <soap12:operation soapAction="http://tempuri.org/getCliente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCuenta">
+      <soap12:operation soapAction="http://tempuri.org/getCuenta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="hacerRetiro">
+      <soap12:operation soapAction="http://tempuri.org/hacerRetiro" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="hacerDeposito">
+      <soap12:operation soapAction="http://tempuri.org/hacerDeposito" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TellerServices">
+    <wsdl:port name="TellerServicesSoap" binding="tns:TellerServicesSoap">
+      <soap:address location="https://integrador20190112103644.azurewebsites.net/TellerServices.asmx" />
+    </wsdl:port>
+    <wsdl:port name="TellerServicesSoap12" binding="tns:TellerServicesSoap12">
+      <soap12:address location="https://integrador20190112103644.azurewebsites.net/TellerServices.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

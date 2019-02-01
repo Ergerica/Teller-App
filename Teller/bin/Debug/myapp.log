@@ -1,0 +1,368 @@
+2019-01-18 11:45:06,330 [5] FATAL Teller.Request - System.ServiceModel.EndpointNotFoundException: There was no endpoint listening at https://integrador20190112103644.azurewebsites.net/TellerServices.asmx that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details. ---> System.Net.WebException: The remote name could not be resolved: 'integrador20190112103644.azurewebsites.net'
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Teller.Integrador.TellerServicesSoap.getCuenta(getCuentaRequest request)
+   at Teller.Integrador.TellerServicesSoapClient.Teller.Integrador.TellerServicesSoap.getCuenta(getCuentaRequest request) in C:\Users\Denys\source\repos\Teller\Teller\Connected Services\Integrador\Reference.cs:line 654
+   at Teller.Integrador.TellerServicesSoapClient.getCuenta(Int32 id) in C:\Users\Denys\source\repos\Teller\Teller\Connected Services\Integrador\Reference.cs:line 661
+   at Teller.Request.getCuenta(Int32 id) in C:\Users\Denys\source\repos\Teller\Teller\Clases\Request.cs:line 27
+2019-01-18 11:45:06,365 [5] FATAL Teller.Request - System.ServiceModel.EndpointNotFoundException: There was no endpoint listening at https://integrador20190112103644.azurewebsites.net/TellerServices.asmx that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details. ---> System.Net.WebException: The remote name could not be resolved: 'integrador20190112103644.azurewebsites.net'
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Teller.Integrador.TellerServicesSoap.getCliente(getClienteRequest request)
+   at Teller.Integrador.TellerServicesSoapClient.Teller.Integrador.TellerServicesSoap.getCliente(getClienteRequest request) in C:\Users\Denys\source\repos\Teller\Teller\Connected Services\Integrador\Reference.cs:line 629
+   at Teller.Integrador.TellerServicesSoapClient.getCliente(String cedula) in C:\Users\Denys\source\repos\Teller\Teller\Connected Services\Integrador\Reference.cs:line 636
+   at Teller.Request.getCliente(String cedula) in C:\Users\Denys\source\repos\Teller\Teller\Clases\Request.cs:line 78
+2019-01-18 11:45:08,287 [7] FATAL Teller.Request - System.ServiceModel.EndpointNotFoundException: There was no endpoint listening at https://integrador20190112103644.azurewebsites.net/TellerServices.asmx that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details. ---> System.Net.WebException: The remote name could not be resolved: 'integrador20190112103644.azurewebsites.net'
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Teller.Integrador.TellerServicesSoap.getCuenta(getCuentaRequest request)
+   at Teller.Integrador.TellerServicesSoapClient.Teller.Integrador.TellerServicesSoap.getCuenta(getCuentaRequest request) in C:\Users\Denys\source\repos\Teller\Teller\Connected Services\Integrador\Reference.cs:line 654
+   at Teller.Integrador.TellerServicesSoapClient.getCuenta(Int32 id) in C:\Users\Denys\source\repos\Teller\Teller\Connected Services\Integrador\Reference.cs:line 661
+   at Teller.Request.getCuenta(Int32 id) in C:\Users\Denys\source\repos\Teller\Teller\Clases\Request.cs:line 27
+2019-01-18 11:45:08,296 [7] FATAL Teller.Request - System.ServiceModel.EndpointNotFoundException: There was no endpoint listening at https://integrador20190112103644.azurewebsites.net/TellerServices.asmx that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details. ---> System.Net.WebException: The remote name could not be resolved: 'integrador20190112103644.azurewebsites.net'
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Teller.Integrador.TellerServicesSoap.getCliente(getClienteRequest request)
+   at Teller.Integrador.TellerServicesSoapClient.Teller.Integrador.TellerServicesSoap.getCliente(getClienteRequest request) in C:\Users\Denys\source\repos\Teller\Teller\Connected Services\Integrador\Reference.cs:line 629
+   at Teller.Integrador.TellerServicesSoapClient.getCliente(String cedula) in C:\Users\Denys\source\repos\Teller\Teller\Connected Services\Integrador\Reference.cs:line 636
+   at Teller.Request.getCliente(String cedula) in C:\Users\Denys\source\repos\Teller\Teller\Clases\Request.cs:line 78
+2019-01-18 11:45:08,886 [8] FATAL Teller.Request - System.ServiceModel.EndpointNotFoundException: There was no endpoint listening at https://integrador20190112103644.azurewebsites.net/TellerServices.asmx that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details. ---> System.Net.WebException: The remote name could not be resolved: 'integrador20190112103644.azurewebsites.net'
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Teller.Integrador.TellerServicesSoap.getCuenta(getCuentaRequest request)
+   at Teller.Integrador.TellerServicesSoapClient.Teller.Integrador.TellerServicesSoap.getCuenta(getCuentaRequest request) in C:\Users\Denys\source\repos\Teller\Teller\Connected Services\Integrador\Reference.cs:line 654
+   at Teller.Integrador.TellerServicesSoapClient.getCuenta(Int32 id) in C:\Users\Denys\source\repos\Teller\Teller\Connected Services\Integrador\Reference.cs:line 661
+   at Teller.Request.getCuenta(Int32 id) in C:\Users\Denys\source\repos\Teller\Teller\Clases\Request.cs:line 27
+2019-01-18 11:45:08,895 [8] FATAL Teller.Request - System.ServiceModel.EndpointNotFoundException: There was no endpoint listening at https://integrador20190112103644.azurewebsites.net/TellerServices.asmx that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details. ---> System.Net.WebException: The remote name could not be resolved: 'integrador20190112103644.azurewebsites.net'
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Teller.Integrador.TellerServicesSoap.getCliente(getClienteRequest request)
+   at Teller.Integrador.TellerServicesSoapClient.Teller.Integrador.TellerServicesSoap.getCliente(getClienteRequest request) in C:\Users\Denys\source\repos\Teller\Teller\Connected Services\Integrador\Reference.cs:line 629
+   at Teller.Integrador.TellerServicesSoapClient.getCliente(String cedula) in C:\Users\Denys\source\repos\Teller\Teller\Connected Services\Integrador\Reference.cs:line 636
+   at Teller.Request.getCliente(String cedula) in C:\Users\Denys\source\repos\Teller\Teller\Clases\Request.cs:line 78
+2019-01-18 11:45:09,435 [9] FATAL Teller.Request - System.ServiceModel.EndpointNotFoundException: There was no endpoint listening at https://integrador20190112103644.azurewebsites.net/TellerServices.asmx that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details. ---> System.Net.WebException: The remote name could not be resolved: 'integrador20190112103644.azurewebsites.net'
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Teller.Integrador.TellerServicesSoap.getCuenta(getCuentaRequest request)
+   at Teller.Integrador.TellerServicesSoapClient.Teller.Integrador.TellerServicesSoap.getCuenta(getCuentaRequest request) in C:\Users\Denys\source\repos\Teller\Teller\Connected Services\Integrador\Reference.cs:line 654
+   at Teller.Integrador.TellerServicesSoapClient.getCuenta(Int32 id) in C:\Users\Denys\source\repos\Teller\Teller\Connected Services\Integrador\Reference.cs:line 661
+   at Teller.Request.getCuenta(Int32 id) in C:\Users\Denys\source\repos\Teller\Teller\Clases\Request.cs:line 27
+2019-01-18 11:45:09,446 [9] FATAL Teller.Request - System.ServiceModel.EndpointNotFoundException: There was no endpoint listening at https://integrador20190112103644.azurewebsites.net/TellerServices.asmx that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details. ---> System.Net.WebException: The remote name could not be resolved: 'integrador20190112103644.azurewebsites.net'
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Teller.Integrador.TellerServicesSoap.getCliente(getClienteRequest request)
+   at Teller.Integrador.TellerServicesSoapClient.Teller.Integrador.TellerServicesSoap.getCliente(getClienteRequest request) in C:\Users\Denys\source\repos\Teller\Teller\Connected Services\Integrador\Reference.cs:line 629
+   at Teller.Integrador.TellerServicesSoapClient.getCliente(String cedula) in C:\Users\Denys\source\repos\Teller\Teller\Connected Services\Integrador\Reference.cs:line 636
+   at Teller.Request.getCliente(String cedula) in C:\Users\Denys\source\repos\Teller\Teller\Clases\Request.cs:line 78
+2019-01-18 11:45:09,933 [10] FATAL Teller.Request - System.ServiceModel.EndpointNotFoundException: There was no endpoint listening at https://integrador20190112103644.azurewebsites.net/TellerServices.asmx that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details. ---> System.Net.WebException: The remote name could not be resolved: 'integrador20190112103644.azurewebsites.net'
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Teller.Integrador.TellerServicesSoap.getCuenta(getCuentaRequest request)
+   at Teller.Integrador.TellerServicesSoapClient.Teller.Integrador.TellerServicesSoap.getCuenta(getCuentaRequest request) in C:\Users\Denys\source\repos\Teller\Teller\Connected Services\Integrador\Reference.cs:line 654
+   at Teller.Integrador.TellerServicesSoapClient.getCuenta(Int32 id) in C:\Users\Denys\source\repos\Teller\Teller\Connected Services\Integrador\Reference.cs:line 661
+   at Teller.Request.getCuenta(Int32 id) in C:\Users\Denys\source\repos\Teller\Teller\Clases\Request.cs:line 27
+2019-01-18 11:45:09,941 [10] FATAL Teller.Request - System.ServiceModel.EndpointNotFoundException: There was no endpoint listening at https://integrador20190112103644.azurewebsites.net/TellerServices.asmx that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details. ---> System.Net.WebException: The remote name could not be resolved: 'integrador20190112103644.azurewebsites.net'
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Teller.Integrador.TellerServicesSoap.getCliente(getClienteRequest request)
+   at Teller.Integrador.TellerServicesSoapClient.Teller.Integrador.TellerServicesSoap.getCliente(getClienteRequest request) in C:\Users\Denys\source\repos\Teller\Teller\Connected Services\Integrador\Reference.cs:line 629
+   at Teller.Integrador.TellerServicesSoapClient.getCliente(String cedula) in C:\Users\Denys\source\repos\Teller\Teller\Connected Services\Integrador\Reference.cs:line 636
+   at Teller.Request.getCliente(String cedula) in C:\Users\Denys\source\repos\Teller\Teller\Clases\Request.cs:line 78
+2019-01-18 11:45:10,443 [11] FATAL Teller.Request - System.ServiceModel.EndpointNotFoundException: There was no endpoint listening at https://integrador20190112103644.azurewebsites.net/TellerServices.asmx that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details. ---> System.Net.WebException: The remote name could not be resolved: 'integrador20190112103644.azurewebsites.net'
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Teller.Integrador.TellerServicesSoap.getCuenta(getCuentaRequest request)
+   at Teller.Integrador.TellerServicesSoapClient.Teller.Integrador.TellerServicesSoap.getCuenta(getCuentaRequest request) in C:\Users\Denys\source\repos\Teller\Teller\Connected Services\Integrador\Reference.cs:line 654
+   at Teller.Integrador.TellerServicesSoapClient.getCuenta(Int32 id) in C:\Users\Denys\source\repos\Teller\Teller\Connected Services\Integrador\Reference.cs:line 661
+   at Teller.Request.getCuenta(Int32 id) in C:\Users\Denys\source\repos\Teller\Teller\Clases\Request.cs:line 27
+2019-01-18 11:45:10,452 [11] FATAL Teller.Request - System.ServiceModel.EndpointNotFoundException: There was no endpoint listening at https://integrador20190112103644.azurewebsites.net/TellerServices.asmx that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details. ---> System.Net.WebException: The remote name could not be resolved: 'integrador20190112103644.azurewebsites.net'
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Teller.Integrador.TellerServicesSoap.getCliente(getClienteRequest request)
+   at Teller.Integrador.TellerServicesSoapClient.Teller.Integrador.TellerServicesSoap.getCliente(getClienteRequest request) in C:\Users\Denys\source\repos\Teller\Teller\Connected Services\Integrador\Reference.cs:line 629
+   at Teller.Integrador.TellerServicesSoapClient.getCliente(String cedula) in C:\Users\Denys\source\repos\Teller\Teller\Connected Services\Integrador\Reference.cs:line 636
+   at Teller.Request.getCliente(String cedula) in C:\Users\Denys\source\repos\Teller\Teller\Clases\Request.cs:line 78
+2019-01-18 11:45:10,978 [12] FATAL Teller.Request - System.ServiceModel.EndpointNotFoundException: There was no endpoint listening at https://integrador20190112103644.azurewebsites.net/TellerServices.asmx that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details. ---> System.Net.WebException: The remote name could not be resolved: 'integrador20190112103644.azurewebsites.net'
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Teller.Integrador.TellerServicesSoap.getCuenta(getCuentaRequest request)
+   at Teller.Integrador.TellerServicesSoapClient.Teller.Integrador.TellerServicesSoap.getCuenta(getCuentaRequest request) in C:\Users\Denys\source\repos\Teller\Teller\Connected Services\Integrador\Reference.cs:line 654
+   at Teller.Integrador.TellerServicesSoapClient.getCuenta(Int32 id) in C:\Users\Denys\source\repos\Teller\Teller\Connected Services\Integrador\Reference.cs:line 661
+   at Teller.Request.getCuenta(Int32 id) in C:\Users\Denys\source\repos\Teller\Teller\Clases\Request.cs:line 27
+2019-01-18 11:45:10,986 [12] FATAL Teller.Request - System.ServiceModel.EndpointNotFoundException: There was no endpoint listening at https://integrador20190112103644.azurewebsites.net/TellerServices.asmx that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details. ---> System.Net.WebException: The remote name could not be resolved: 'integrador20190112103644.azurewebsites.net'
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Teller.Integrador.TellerServicesSoap.getCliente(getClienteRequest request)
+   at Teller.Integrador.TellerServicesSoapClient.Teller.Integrador.TellerServicesSoap.getCliente(getClienteRequest request) in C:\Users\Denys\source\repos\Teller\Teller\Connected Services\Integrador\Reference.cs:line 629
+   at Teller.Integrador.TellerServicesSoapClient.getCliente(String cedula) in C:\Users\Denys\source\repos\Teller\Teller\Connected Services\Integrador\Reference.cs:line 636
+   at Teller.Request.getCliente(String cedula) in C:\Users\Denys\source\repos\Teller\Teller\Clases\Request.cs:line 78
+2019-01-18 11:50:28,550 [7] FATAL Teller.Request - System.ServiceModel.EndpointNotFoundException: There was no endpoint listening at https://integrador20190112103644.azurewebsites.net/TellerServices.asmx that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details. ---> System.Net.WebException: The remote name could not be resolved: 'integrador20190112103644.azurewebsites.net'
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Teller.Integrador.TellerServicesSoap.getCliente(getClienteRequest request)
+   at Teller.Integrador.TellerServicesSoapClient.Teller.Integrador.TellerServicesSoap.getCliente(getClienteRequest request) in C:\Users\Denys\source\repos\Teller\Teller\Connected Services\Integrador\Reference.cs:line 629
+   at Teller.Integrador.TellerServicesSoapClient.getCliente(String cedula) in C:\Users\Denys\source\repos\Teller\Teller\Connected Services\Integrador\Reference.cs:line 636
+   at Teller.Request.getCliente(String cedula) in C:\Users\Denys\source\repos\Teller\Teller\Clases\Request.cs:line 78
+2019-01-18 11:50:28,550 [5] FATAL Teller.Request - System.ServiceModel.EndpointNotFoundException: There was no endpoint listening at https://integrador20190112103644.azurewebsites.net/TellerServices.asmx that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details. ---> System.Net.WebException: The remote name could not be resolved: 'integrador20190112103644.azurewebsites.net'
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Teller.Integrador.TellerServicesSoap.getCliente(getClienteRequest request)
+   at Teller.Integrador.TellerServicesSoapClient.Teller.Integrador.TellerServicesSoap.getCliente(getClienteRequest request) in C:\Users\Denys\source\repos\Teller\Teller\Connected Services\Integrador\Reference.cs:line 629
+   at Teller.Integrador.TellerServicesSoapClient.getCliente(String cedula) in C:\Users\Denys\source\repos\Teller\Teller\Connected Services\Integrador\Reference.cs:line 636
+   at Teller.Request.getCliente(String cedula) in C:\Users\Denys\source\repos\Teller\Teller\Clases\Request.cs:line 78

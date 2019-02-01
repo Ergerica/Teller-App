@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="getCliente">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cedula" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getClienteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getClienteResult" type="tns:Cliente" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Cliente">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="apellido" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="cedula" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="getClienteSoapIn">
+    <wsdl:part name="parameters" element="tns:getCliente" />
+  </wsdl:message>
+  <wsdl:message name="getClienteSoapOut">
+    <wsdl:part name="parameters" element="tns:getClienteResponse" />
+  </wsdl:message>
+  <wsdl:portType name="DepositoServiceSoap">
+    <wsdl:operation name="getCliente">
+      <wsdl:input message="tns:getClienteSoapIn" />
+      <wsdl:output message="tns:getClienteSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="DepositoServiceSoap" type="tns:DepositoServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getCliente">
+      <soap:operation soapAction="http://tempuri.org/getCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="DepositoServiceSoap12" type="tns:DepositoServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getCliente">
+      <soap12:operation soapAction="http://tempuri.org/getCliente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DepositoService">
+    <wsdl:port name="DepositoServiceSoap" binding="tns:DepositoServiceSoap">
+      <soap:address location="https://depositowebservice20190107011624.azurewebsites.net/DepositoService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="DepositoServiceSoap12" binding="tns:DepositoServiceSoap12">
+      <soap12:address location="https://depositowebservice20190107011624.azurewebsites.net/DepositoService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
